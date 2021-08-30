@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.954" timestamp="2021-08-30T23:29:37.822131" hostname="willies-MacBook-Pro.local"><testcase classname="test_api.TestValidNumber" name="test_invalid_serial_number" time="1.842"><failure message="assert &quot;We couldn't find a product ith this serial number. Please double-check the serial number and try again.&quot; in &quot;&lt;p&gt;We couldn't find a product with this serial number. Please double-check the serial number and try again.&lt;/p&gt;&quot;">self = &lt;tests.test_api.TestValidNumber object at 0x10980c610&gt;
+
+    def test_invalid_serial_number(self):
+        test_data = self._handle_query_string("12345678")
+        response = requests.post(endpoint, params=test_data, headers=header)
+        response_body = response.json()
+        assert response.status_code == 200
+        assert response_body["results"] is None
+        assert not response_body["success"]
+&gt;       assert "We couldn't find a product ith this serial number. Please double-check the serial number and try again." in response_body["notFoundMessage"]
+E       assert "We couldn't find a product ith this serial number. Please double-check the serial number and try again." in "&lt;p&gt;We couldn't find a product with this serial number. Please double-check the serial number and try again.&lt;/p&gt;"
+
+tests/test_api.py:42: AssertionError</failure></testcase></testsuite></testsuites>

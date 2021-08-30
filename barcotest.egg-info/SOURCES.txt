@@ -1,0 +1,9 @@
+setup.py
+barcotest.egg-info/PKG-INFO
+barcotest.egg-info/SOURCES.txt
+barcotest.egg-info/dependency_links.txt
+barcotest.egg-info/not-zip-safe
+barcotest.egg-info/requires.txt
+barcotest.egg-info/top_level.txt
+test_var/__init__.py
+test_var/test_element_location.py
