@@ -18,3 +18,4 @@ Barco Warranty WebUI Test & API Test
   pytest [path of testcase file]::[test class name]
 4. To execute single testcases in a test class:
   pytest [path of testcase file]::[test class name]::[testccase name]
+5. Check the report file in ./reports
